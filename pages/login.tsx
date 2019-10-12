@@ -13,6 +13,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Axios from 'axios'
 
+import swal from 'sweetalert';
+
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -81,6 +84,7 @@ export default function SignIn() {
     }).then((res) => {
         if(res.data.status == 'fail'){
           console.log(res.data.message);
+          swal("Oops!", "Wrong email address or password", "error");
         }else{
           window.location.href = '/user';
         }
