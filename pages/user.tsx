@@ -130,7 +130,7 @@ export default function StickyHeadTable() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" color="inherit">
-              Photos
+              User Management
             </Typography>
           </Toolbar>
         </AppBar>
